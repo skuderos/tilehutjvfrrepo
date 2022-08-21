@@ -2,11 +2,11 @@
     "version": 8,
     "sources": {
         "tilehut": {
-            "type": "baselayer",
+            "type": "vector",
             "tiles": [
-                "https://jvfrtilemapper.herokuapp.com/ehaa_256{z}/{x}/{y}.ng"
+                "http://0.0.0.0:8000/tiles-world-vector/{z}/{x}/{y}.pbf"
             ],
-            "maxzoom": 11
+            "maxzoom": 5
         }
     },
     "layers": [{

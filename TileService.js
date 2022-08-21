@@ -1,7 +1,7 @@
 "use strict";
 
 var config = require('./config');
-var MBTiles = require('@mapbox/mbtiles');
+var MBTiles = require('mbtiles');
 var path = require('path');
 var fs = require('fs');
 

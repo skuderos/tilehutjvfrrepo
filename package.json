@@ -16,6 +16,7 @@
     "watch": "watch 'node server.js' ."
   },
     "main": "server.js",
+	
   "repository": {
     "type": "git",
     "url": "http://github.com/b-g/tilehut.git"

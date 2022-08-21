@@ -1,7 +1,7 @@
 "use strict";
 
 var config = require('./config');
-var MBTiles = require('mbtiles3');
+var MBTiles = require('mbtiles');
 var path = require('path');
 var fs = require('fs');
 

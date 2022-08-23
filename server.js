@@ -42,11 +42,17 @@ var routeHandlers = {
 
 // TODO Cache-Control: setting
 
-
+app.disable('x-powered-by');
+app.use('*', function(req, res, next) {
+  // set CORS response header
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  next();
+});
 
 app.use('/:ts/map', express.static(config.MAP_DIR));
 
-app.route('/:ts/:z/:x/:y.*grid.json$').get(routeHandlers.getGrid);
+app.route('/:ts/:z/:x/:y.grid.json$').get(routeHandlers.getGrid);
 app.route('/:ts/:z/:x/:y.*').get(routeHandlers.getTile);
 app.route('/:ts/meta.json').get(routeHandlers.getInfo);
 app.route('/ping').get(routeHandlers.ping);

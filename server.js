@@ -10,9 +10,8 @@ var TileService = require('./TileService');
 var routeHandlers = {
   getTile: function(req, res, next) {
     var tileService = new TileService(req);
-    tileService.getTile(function(err, tile, headers) {
+    tileService.getTile(function(err, tile) {
       if (err) return res.status(404).send(err.message);
-      res.set(headers);
       res.send(tile);
     });
   },

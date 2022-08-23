@@ -45,7 +45,7 @@ var routeHandlers = {
 app.disable('x-powered-by');
 app.use('*', function(req, res, next) {
   // set CORS response header
-  res.header('Access-Control-Allow-Origin', '<origin>');
+  res.header('Access-Control-Allow-Origin', 'null');
   res.header('Access-Control-Allow-Headers', 'X-Requested-With');
   next();
 });

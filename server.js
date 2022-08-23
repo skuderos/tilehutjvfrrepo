@@ -52,8 +52,8 @@ app.use('*', function(req, res, next) {
 
 app.use('/:ts/map', express.static(config.MAP_DIR));
 
-app.route('/:ts/:z/:x/:y.grid.json$').get(routeHandlers.getGrid);
-app.route('/:ts/:z/:x/:y.*').get(routeHandlers.getTile);
+app.route('/:ts/:z/:x/:y.*grid.json$').get(routeHandlers.getGrid);
+app.route('/:ts/:z/:x/:y').get(routeHandlers.getTile);
 app.route('/:ts/meta.json').get(routeHandlers.getInfo);
 app.route('/ping').get(routeHandlers.ping);
 app.route('/').get(routeHandlers.healthStatus);

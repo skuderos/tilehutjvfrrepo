@@ -47,6 +47,7 @@ app.use('*', function(req, res, next) {
   // set CORS response header
   res.header('Access-Control-Allow-Origin', 'null');
   res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  res.header('X-XSS-Protection', '0');
   next();
 });
 
